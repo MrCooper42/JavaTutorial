@@ -67,21 +67,30 @@ class BasicsDemo {
 
     static int count = 25; // declaration statment at class level
 
+    static void arrays() {
+        System.out.println("\nInside arrays ...");
+        int[] myArray = new int [] {9, 11 ,2 ,5 ,4, 4, 6};
+        System.out.println("MyArray.length: " + myArray.length);   
+        System.out.println("MyArray.[1]: " + myArray[1]);
+        // System.out.println("MyArray.[1]: " + myArray[7]); RUNTIME ERROR
+    }
+
     public static void main(String[] args) {
         // if (count < 49) {
             // NOT ON CLASS LEVEL
         // } 
-        //count = 34 NOT ON CLASS LEVEL        
+        // count = 34 NOT ON CLASS LEVEL        
         // Language Basics 1
         // print();
         // primitives();
-        typeCasting();
+        // typeCasting();
+        arrays();
     }
 
-    // Field declarations
-    // Method declarations
-    // Constructor declarations
-    // Nested class & interface declarations
-    // Instance and static initalizers
-    
+    // Field declarations OK
+    // Method declarations OK
+    // Constructor declarations OK
+    // Nested class & interface declarations OK
+    // Instance and static initalizers OK
+
 }
