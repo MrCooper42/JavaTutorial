@@ -75,6 +75,37 @@ class BasicsDemo {
         // System.out.println("MyArray.[1]: " + myArray[7]); RUNTIME ERROR
     }
 
+    static void threeDimensionalArrays() { // 3D Matrix
+        System.out.println("\nInside threeDimensionalArrays ...");
+        int[][][] unitsSold = new int[][][]{ // can remove `new int` from 2 dimensional and up
+            { // New York
+                {0, 0, 0, 0}, // Jan
+                {0, 0, 0, 0}, // Feb
+                {0, 0, 0, 0}, // Mar
+                {0, 850, 0, 0} // Apr
+            },
+            { // San Francisco
+                {0, 0, 0, 0},
+                {0, 0, 0, 0},
+                {0, 0, 0, 0},
+                {0, 0, 0, 0}
+            },
+            { // DC
+                {0, 0, 0, 0},
+                {0, 0, 0, 0},
+                {0, 0, 0, 0},
+                {0, 0, 0, 0}
+            },
+            { // Denver
+                {0, 0, 0, 0},
+                {0, 0, 0, 0},
+                {0, 0, 0, 0},
+                {0, 0, 0, 0}
+            }
+        };
+        System.out.println("unitsSold[0][3][1]: " + unitsSold[0][3][1]);
+    } 
+
     public static void main(String[] args) {
         // if (count < 49) {
             // NOT ON CLASS LEVEL
@@ -84,7 +115,8 @@ class BasicsDemo {
         // print();
         // primitives();
         // typeCasting();
-        arrays();
+        // arrays();
+        threeDimensionalArrays();
     }
 
     // Field declarations OK
