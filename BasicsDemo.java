@@ -121,6 +121,15 @@ class BasicsDemo {
         System.out.println("go(short s)");
     }
 
+    static void varargsOverload(boolean b, int i, int j, int k) {
+        System.out.println("\nInside varargsOverload without varargs ...");
+    }
+
+    static void varargsOverload(boolean b, int... list) {
+        System.out.println("\nInside varargsOverload with varargs ...");
+        System.out.println("list.length: " + list.length);
+    }
+
     public static void main(String[] args) {
         // // if (count < 49) {
         // //     NOT ON CLASS LEVEL
@@ -133,13 +142,17 @@ class BasicsDemo {
         // arrays();
         // threeDimensionalArrays();
 
-        int[] array = {1, 2};
-        go(array);
-        System.out.println("array[1]: " + array[1]);
+        // int[] array = {1, 2};
+        // go(array);
+        // System.out.println("array[1]: " + array[1]);
 
-        byte b = 22;
-        go(b); // method overload short s
+        // byte b = 22;
+        // go(b); // method overload short s
         // go(23); method overload int i
+
+        varargsOverload(true, 1, 2, 3);
+        varargsOverload(true, 1, 2, 3, 4, 5, 6, 7, 8);
+        varargsOverload(true);
     }
 
     // Field declarations OK
