@@ -106,17 +106,40 @@ class BasicsDemo {
         System.out.println("unitsSold[0][3][1]: " + unitsSold[0][3][1]);
     } 
 
+    static void go(int[] array) {
+        System.out.println("array[0]: " + array[0]);
+        System.out.println("array[1]: " + array[1]);
+
+        array[1] = 22;
+    }
+
+    static void go(int i) {
+        System.out.println("go(int i)");
+    }
+
+    static void go(short s) {
+        System.out.println("go(short s)");
+    }
+
     public static void main(String[] args) {
-        // if (count < 49) {
-            // NOT ON CLASS LEVEL
-        // } 
-        // count = 34 NOT ON CLASS LEVEL        
+        // // if (count < 49) {
+        // //     NOT ON CLASS LEVEL
+        // // } 
+        // // count = 34 NOT ON CLASS LEVEL        
         // Language Basics 1
         // print();
         // primitives();
         // typeCasting();
         // arrays();
-        threeDimensionalArrays();
+        // threeDimensionalArrays();
+
+        int[] array = {1, 2};
+        go(array);
+        System.out.println("array[1]: " + array[1]);
+
+        byte b = 22;
+        go(b); // method overload short s
+        // go(23); method overload int i
     }
 
     // Field declarations OK
