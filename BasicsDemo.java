@@ -139,6 +139,45 @@ class BasicsDemo {
         System.out.println("('a' + 'b'): " + ('a' + 'b')); // 'a' + 'b' are promoted to ints and the respected eq. 97 & 98 are added
     }
 
+    static void bitwiseOperators() { 
+        System.out.println("\nInside bitwiseOperators ...");
+        int x = 1;
+        int y = 3;
+
+        System.out.println("x & y: " + (x & y));
+        System.out.println("x | y: " + (x | y));
+        System.out.println("x ^ y: " + (x ^ y));
+        System.out.println("~x: " + (~x));
+        System.out.println("true & false: " + (true & false));
+
+        char c1 = 'a'; // U+0061 --> 0110 0001
+        char c2 = 'b'; // U+0062 --> 0110 0010
+        System.out.println("c1 | c2: " + (c1 | c2)); // 0110 0011 --< 99 in decimial
+
+        // Since bitwise work only on INteger types, following will not compile
+        // double d1 = 3.14;
+        // double d2 = 5.15;
+        // System.out.println("d1 | d2: " + (d1 | d2));
+
+    }
+
+    static void switchExample() { 
+        System.out.println("\nInside switchExample ...");
+        final byte month2 = 2; // final makes this a constant and allows this to compile
+        byte month = 3;
+        // Integer month = new Integer(3);
+        switch(month){
+            case 1: System.out.println("January");
+                    break;
+            case month2: System.out.println("Febuary");
+                    break;
+            case 3: System.out.println("March");
+                    break;
+            default: System.out.println("April");
+        }
+    }
+    
+
     public static void main(String[] args) {
         // // if (count < 49) {
         // //     NOT ON CLASS LEVEL
@@ -163,7 +202,10 @@ class BasicsDemo {
         // varargsOverload(true, 1, 2, 3, 4, 5, 6, 7, 8);
         // varargsOverload(true);
 
-        charTypePromotion();
+        // charTypePromotion();
+        // bitwiseOperators();
+
+        switchExample();
     }
 
     // Field declarations OK
