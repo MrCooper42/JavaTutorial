@@ -130,6 +130,15 @@ class BasicsDemo {
         System.out.println("list.length: " + list.length);
     }
 
+    static void charTypePromotion() {
+        System.out.println("\nInside charTypePromotion ...");
+        char char1 = 50; // Will be assigned corresponding UTF16 value 2
+        System.out.println("char1: " + char1);
+        System.out.println("(73 - char1): " + (73 - char1)); // char1 gets promoted to int, i.e. decimal eq. 50 in UTF16 is used
+        System.out.println("(char1 - '3'): " + (char1 - '3')); // char 1 & 3 are promoted to ints
+        System.out.println("('a' + 'b'): " + ('a' + 'b')); // 'a' + 'b' are promoted to ints and the respected eq. 97 & 98 are added
+    }
+
     public static void main(String[] args) {
         // // if (count < 49) {
         // //     NOT ON CLASS LEVEL
@@ -150,9 +159,11 @@ class BasicsDemo {
         // go(b); // method overload short s
         // go(23); method overload int i
 
-        varargsOverload(true, 1, 2, 3);
-        varargsOverload(true, 1, 2, 3, 4, 5, 6, 7, 8);
-        varargsOverload(true);
+        // varargsOverload(true, 1, 2, 3);
+        // varargsOverload(true, 1, 2, 3, 4, 5, 6, 7, 8);
+        // varargsOverload(true);
+
+        charTypePromotion();
     }
 
     // Field declarations OK

@@ -14,7 +14,7 @@ class User {
     }
 
     public static void main(String[] args) {
-        User instructor = new User(1002, "Matt", 63000);
-        System.out.println("Name: " + instructor.name);
+        User instructorz = new User(1002, "Matt", 63000);
+        System.out.println("Name: " + instructorz.name);
     }
 }
