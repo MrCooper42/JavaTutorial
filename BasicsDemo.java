@@ -176,9 +176,54 @@ class BasicsDemo {
             default: System.out.println("April");
         }
     }
+
+    // Ternary statement
     
+    static int min(int x, int y) {
+        return (x < y) ? x : y;
+    }
+
+    static void labeledBreak() {
+        System.out.println("\nInside labeledBreak ...");
+        int num = 0;
+
+        outermost: for (int i = 0; i < 10; i ++) { 
+            for (int j = 0; j < 10; j++) {
+                if (i == 5 && j == 5) {
+                    break outermost;
+                }
+                num++;
+            }
+        }
+
+        System.out.println("num: " + num); // 55
+    }
+
+    static void labeledContinue() {
+        System.out.println("\nInside labeledContinue ...");
+        int num = 0;
+
+        outermost: for (int i = 0; i < 10; i ++) { 
+            for (int j = 0; j < 10; j++) {
+                if (i == 5 && j == 5) {
+                    continue outermost;
+                }
+                num++;
+            }
+        }
+
+        System.out.println("num: " + num); // 95
+    }
 
     public static void main(String[] args) {
+
+
+        // int[] iArray = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
+        // for(int i = 0; i < iArray.length; i++) {
+        //     System.out.println(iArray[i]);
+        // }
+        // for(int i = 0; i < iArray.length; System.out.println(iArray[i++])); valid compact for loop
+
         // // if (count < 49) {
         // //     NOT ON CLASS LEVEL
         // // } 
@@ -205,7 +250,13 @@ class BasicsDemo {
         // charTypePromotion();
         // bitwiseOperators();
 
-        switchExample();
+        // switchExample();
+
+        // int min = min(9, 3);
+        // System.out.println("min: " + min);
+
+        // labeledBreak();
+        labeledContinue();
     }
 
     // Field declarations OK
